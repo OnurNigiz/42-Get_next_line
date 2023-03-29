@@ -84,30 +84,30 @@ char	*ft_line(char *handle_string)
 	return (ptr);
 }
 
-// char	*ft_clean(char *handle_string)
-// {
-// 	int		i;
-// 	int		j;
-// 	char	*ptr;
+char	*ft_clean(char *handle_string)
+{
+	int		i;
+	int		j;
+	char	*ptr;
 
-// 	i = 0;
-// 	j = 0;
-// 	while (handle_string[i] && handle_string[i] != '\n')
-// 		i++;
-// 	if (!handle_string[i])
-// 	{
-// 		free(handle_string);
-// 		return (0);
-// 	}
-// 	ptr = malloc (sizeof(char) * (ft_strlen(handle_string) - i + 1));
-// 	i++;
-// 	while (handle_string[i])
-// 	{
-// 		ptr[j] = handle_string[i];
-// 		i++;
-// 		j++;
-// 	}
-// 	ptr[j] = '\0';
-// 	free(handle_string);
-// 	return (ptr);
-// }
+	i = 0;
+	j = 0;
+	while (handle_string[i] && handle_string[i] != '\n')
+		i++;
+	if (!handle_string[i])
+	{
+		free(handle_string);
+		return (0);
+	}
+	ptr = malloc (sizeof(char) * (ft_strlen(handle_string) - i + 1));
+	i++;
+	while (handle_string[i])
+	{
+		ptr[j] = handle_string[i];
+		i++;
+		j++;
+	}
+	ptr[j] = '\0';
+	free(handle_string);
+	return (ptr);
+}
